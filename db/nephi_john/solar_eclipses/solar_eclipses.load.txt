@@ -1,0 +1,17 @@
+
+CMD
+
+mysql -u root
+
+
+LOAD DATA LOCAL INFILE "D:\\run\\Solar-Eclipse.txt"
+	INTO TABLE `nephi_john`.`solar_eclipses`
+	FIELDS TERMINATED BY ','
+	ENCLOSED BY '"'
+	LINES TERMINATED BY '\r\n'
+	IGNORE 1 LINES	
+	(catalog_number,catalog_plate,year_nasa,month,day,hour,minute,second,latitude,longitude,eclipse_type,magnitude_eclipse,lunation_number,saros_number,delta_Ts,QLE,gamma,sun_altitude,sun_azimuth,duration_central,path_width,year_BC,upper,lower,my_50,intensity_category,page,gif);
+	
+	
+
+

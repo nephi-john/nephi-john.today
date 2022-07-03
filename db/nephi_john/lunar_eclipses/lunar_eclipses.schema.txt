@@ -1,0 +1,85 @@
+
+--
+-- Table structure for table `lunar_eclipses`
+--
+
+CREATE TABLE `lunar_eclipses` (
+  `catalog_number` smallint(6) NOT NULL,
+  `year_nasa` smallint(6) NOT NULL,
+  `month` tinyint(4) NOT NULL,
+  `day` tinyint(4) NOT NULL,
+  `hour` tinyint(4) NOT NULL,
+  `minute` tinyint(4) NOT NULL,
+  `second` tinyint(4) NOT NULL,
+  `latitude` float NOT NULL,
+  `longitude` float NOT NULL,
+  `eclipse_type` varchar(2) NOT NULL,
+  `magnitude_umbral` float NOT NULL,
+  `lunation_number` mediumint(9) NOT NULL,
+  `saros_number` smallint(6) NOT NULL,
+  `delta_Ts` mediumint(9) NOT NULL,
+  `QSE` varchar(2) NOT NULL,
+  `gamma` float NOT NULL,
+  `magnitude_penumbral` float NOT NULL,
+  `duration_penumbral` float DEFAULT NULL,
+  `duration_parial` float DEFAULT NULL,
+  `duration_total` float DEFAULT NULL,
+  `year_BC` varchar(50) NOT NULL,
+  `upper` smallint(6) NOT NULL,
+  `lower` smallint(6) NOT NULL,
+  `my_50` smallint(6) NOT NULL,
+  `intensity_category` varchar(15) NOT NULL,
+  `page` text NOT NULL,
+  `gif` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `lunar_eclipses`
+--
+ALTER TABLE `lunar_eclipses`
+  ADD PRIMARY KEY (`catalog_number`),
+  ADD KEY `year_nasa` (`year_nasa`),
+  ADD KEY `month` (`month`),
+  ADD KEY `day` (`day`),
+  ADD KEY `hour` (`hour`),
+  ADD KEY `minute` (`minute`),
+  ADD KEY `second` (`second`),
+  ADD KEY `latitude` (`latitude`),
+  ADD KEY `longitude` (`longitude`),
+  ADD KEY `eclipse_type` (`eclipse_type`),
+  ADD KEY `magnitude_umbral` (`magnitude_umbral`),
+  ADD KEY `lunation_number` (`lunation_number`),
+  ADD KEY `saros_number` (`saros_number`),
+  ADD KEY `delta_Ts` (`delta_Ts`),
+  ADD KEY `gamma` (`gamma`),
+  ADD KEY `QSE` (`QSE`),
+  ADD KEY `magnitude_penumbral` (`magnitude_penumbral`),
+  ADD KEY `duration_penumbral` (`duration_penumbral`),
+  ADD KEY `duration_parial` (`duration_parial`),
+  ADD KEY `duration_total` (`duration_total`),
+  ADD KEY `year_BC` (`year_BC`),
+  ADD KEY `upper` (`upper`),
+  ADD KEY `lower` (`lower`),
+  ADD KEY `my_50` (`my_50`),
+  ADD KEY `intensity_category` (`intensity_category`);
+COMMIT;
+
+
+
+#############################################
+
+
+
+
+
+
+
+
+
+	
+
+

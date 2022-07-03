@@ -1,0 +1,20 @@
+
+
+
+
+CMD
+
+mysql -u root
+
+
+LOAD DATA LOCAL INFILE "D:\\run\\db\\nephi_john\\lunar-phases.csv"
+	INTO TABLE `nephi_john`.`lunar_phases`
+	FIELDS TERMINATED BY ','
+	ENCLOSED BY '"'
+	LINES TERMINATED BY '\r\n'
+	IGNORE 1 LINES
+	(phase_id,year_nasa,lunar_phase,month,day,hour,minute,eclipse);
+	
+	
+
+

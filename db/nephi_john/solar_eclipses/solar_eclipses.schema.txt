@@ -1,0 +1,92 @@
+
+--
+-- Table structure for table `solar_eclipses`
+--
+
+
+
+CREATE TABLE `solar_eclipses` (
+  `catalog_number` smallint(6) NOT NULL,
+  `catalog_plate` tinyint(4) NOT NULL,
+  `year_nasa` smallint(6) NOT NULL,
+  `month` tinyint(4) NOT NULL,
+  `day` tinyint(4) NOT NULL,
+  `hour` tinyint(4) NOT NULL,
+  `minute` tinyint(4) NOT NULL,
+  `second` tinyint(4) NOT NULL,
+  `latitude` float NOT NULL,
+  `longitude` float NOT NULL,
+  `eclipse_type` varchar(2) NOT NULL,
+  `magnitude_eclipse` float NOT NULL,  
+  `lunation_number` mediumint(9) NOT NULL,
+  `saros_number` smallint(6) NOT NULL,
+  `delta_Ts` mediumint(9) NOT NULL,
+  `QLE` varchar(2) NOT NULL,
+  `gamma` float NOT NULL,
+  `sun_altitude` float NOT NULL,
+  `sun_azimuth` float DEFAULT NULL,
+  `duration_central` float DEFAULT NULL,
+  `path_width` float DEFAULT NULL,
+  `year_BC` varchar(50) NOT NULL,
+  `upper` smallint(6) NOT NULL,
+  `lower` smallint(6) NOT NULL,
+  `my_50` smallint(6) NOT NULL,
+  `intensity_category` varchar(15) NOT NULL,
+  `page` text NOT NULL,
+  `gif` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `solar_eclipses`
+--
+
+
+
+ALTER TABLE `solar_eclipses`
+  ADD PRIMARY KEY (`catalog_number`),
+  ADD KEY `catalog_plate` (`catalog_plate`),
+  ADD KEY `year_nasa` (`year_nasa`),
+  ADD KEY `month` (`month`),
+  ADD KEY `day` (`day`),
+  ADD KEY `hour` (`hour`),
+  ADD KEY `minute` (`minute`),
+  ADD KEY `second` (`second`),
+  ADD KEY `latitude` (`latitude`),
+  ADD KEY `longitude` (`longitude`),
+  ADD KEY `eclipse_type` (`eclipse_type`),
+  ADD KEY `magnitude_umbral` (`magnitude_eclipse`),
+  ADD KEY `lunation_number` (`lunation_number`),
+  ADD KEY `saros_number` (`saros_number`),
+  ADD KEY `delta_Ts` (`delta_Ts`),  
+   ADD KEY `QLE` (`QLE`),
+  ADD KEY `gamma` (`gamma`), 
+  ADD KEY `sun_altitude` (`sun_altitude`),
+  ADD KEY `sun_azimuth` (`sun_azimuth`),
+  ADD KEY `duration_central` (`duration_central`),
+  ADD KEY `path_width` (`path_width`),
+  ADD KEY `year_BC` (`year_BC`),
+  ADD KEY `upper` (`upper`),
+  ADD KEY `lower` (`lower`),
+  ADD KEY `my_50` (`my_50`),
+  ADD KEY `intensity_category` (`intensity_category`);
+COMMIT;
+
+
+
+#############################################
+
+
+
+
+
+
+
+
+
+	
+
+
