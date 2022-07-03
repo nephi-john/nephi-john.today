@@ -1,0 +1,68 @@
+
+
+CREATE TABLE `lunar_phases` (
+  `phase_id` int(11) NOT NULL,
+  `year_nasa` smallint(6) NOT NULL,
+  `lunar_phase` tinyint(4) NOT NULL,
+  `month` tinyint(4) NOT NULL,
+  `day` tinyint(4) NOT NULL,
+  `hour` tinyint(4) NOT NULL,
+  `minute` tinyint(4) NOT NULL,
+  `eclipse` varchar(2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `lunar_phases`
+--
+ALTER TABLE `lunar_phases`
+  ADD PRIMARY KEY (`phase_id`),
+  ADD KEY `year_nasa` (`year_nasa`),
+  ADD KEY `lunar_phase` (`lunar_phase`),
+  ADD KEY `month` (`month`),
+  ADD KEY `day` (`day`),
+  ADD KEY `hour` (`hour`),
+  ADD KEY `minute` (`minute`),
+  ADD KEY `eclipse` (`eclipse`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `lunar_phases`
+--
+ALTER TABLE `lunar_phases`
+  MODIFY `phase_id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
+
+
+#############################################
+
+
+
+
+
+
+
+
+
+CMD
+
+mysql -u root
+
+
+LOAD DATA LOCAL INFILE "D:\\run\\db\\nephi_john\\lunar-phases.csv"
+	INTO TABLE `nephi_john`.`lunar_phases`
+	FIELDS TERMINATED BY ','
+	ENCLOSED BY '"'
+	LINES TERMINATED BY '\r\n'
+	IGNORE 1 LINES
+	(phase_id,year_nasa,lunar_phase,month,day,hour,minute,eclipse);
+	
+	
+
+
